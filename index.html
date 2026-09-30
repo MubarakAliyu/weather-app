@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Weather App</title>
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <main class="app">
+    <section class="weather-card">
+
+      <div class="header">
+        <div>
+          <p class="eyebrow">WEATHER APP</p>
+          <h1>Check the weather</h1>
+          <p class="subtitle">
+            Search for a city to view its current weather.
+          </p>
+        </div>
+
+        <div class="weather-icon" id="weatherIcon">☀️</div>
+      </div>
+
+      <form id="weatherForm" class="search-form">
+        <input
+          type="text"
+          id="cityInput"
+          placeholder="Enter a city..."
+          autocomplete="off"
+          required
+        />
+
+        <button type="submit">
+          Search
+        </button>
+      </form>
+
+      <p id="statusMessage" class="status"></p>
+
+      <section id="weatherResult" class="weather-result hidden">
+
+        <div class="location">
+          <h2 id="locationName">Lagos</h2>
+          <p id="locationDetails">Nigeria</p>
+        </div>
+
+        <div class="temperature-section">
+          <div class="temperature">
+            <span id="temperature">--</span>
+            <span class="unit">°C</span>
+          </div>
+
+          <p id="weatherDescription">Weather condition</p>
+        </div>
+
+        <div class="weather-grid">
+
+          <div class="weather-info">
+            <span class="info-label">Feels Like</span>
+            <strong id="feelsLike">--°C</strong>
+          </div>
+
+          <div class="weather-info">
+            <span class="info-label">Humidity</span>
+            <strong id="humidity">--%</strong>
+          </div>
+
+          <div class="weather-info">
+            <span class="info-label">Wind Speed</span>
+            <strong id="windSpeed">-- km/h</strong>
+          </div>
+
+          <div class="weather-info">
+            <span class="info-label">Coordinates</span>
+            <strong id="coordinates">--</strong>
+          </div>
+
+        </div>
+
+      </section>
+
+      <footer>
+        Weather data provided by
+        <a
+          href="https://open-meteo.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Open-Meteo
+        </a>
+      </footer>
+
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
